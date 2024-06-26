@@ -4,5 +4,10 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require("daisyui"), // Add the DaisyUI plugin here
+  ],
+  daisyui: {
+    themes: ["slate"], // Set the theme to "light"
+  },
 };
