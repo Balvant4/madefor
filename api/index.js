@@ -1,5 +1,6 @@
 import express from "express";
 import mongoose from "mongoose";
+import userRouter from "../api/routes/user.route.js";
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -18,3 +19,5 @@ const PORT = process.env.PORT || 4000; // Define a default port if not set in th
 app.listen(PORT, () => {
   console.log(`Example app listening on port ${PORT}`);
 });
+
+app.use("/api/user", userRouter);
