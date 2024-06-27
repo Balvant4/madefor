@@ -1,6 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import userRouter from "../api/routes/user.route.js";
+import authRouter from "../api/routes/auth.route.js";
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -14,6 +15,7 @@ mongoose
   });
 
 const app = express();
+app.use(express.json());
 const PORT = process.env.PORT || 4000; // Define a default port if not set in the environment variables
 
 app.listen(PORT, () => {
@@ -21,3 +23,4 @@ app.listen(PORT, () => {
 });
 
 app.use("/api/user", userRouter);
+app.use("/api/auth", authRouter);
