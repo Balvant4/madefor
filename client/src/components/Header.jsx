@@ -60,7 +60,7 @@ export default function Header() {
               placeholder="Search"
               className="input input-bordered  w-full pl-10"
             />
-            <FaSearch className="absolute top-1/2 left-3 transform -translate-y-1/2 text-slate-600" />{" "}
+            <FaSearch className=" cursor-pointer absolute top-1/2 left-3 transform -translate-y-1/2 text-slate-600" />{" "}
           </div>
         </div>
         <div className="navbar-end">
